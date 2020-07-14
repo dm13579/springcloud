@@ -4,13 +4,12 @@ import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
- * Created by smlz on 2019/11/18.
+ * 配置 加入@LoadBalanced启动ribbon
  */
 @Configuration
-public class WebConfig implements WebMvcConfigurer {
+public class WebConfig {
 
     @LoadBalanced
     @Bean
