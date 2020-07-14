@@ -1,6 +1,7 @@
 package com.dm.springcloud.vo;
 
 public interface ErrorType {
+
     /**
      * 返回code
      *

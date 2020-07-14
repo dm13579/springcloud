@@ -4,7 +4,7 @@ import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
- * Created by smlz on 2019/3/22.
+ * Druid连接池配置
  */
 @ConfigurationProperties(prefix = "spring.datasource.druid")
 @Data

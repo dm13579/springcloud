@@ -5,7 +5,9 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
-
+/**
+ * 返回结果
+ */
 @Getter
 @NoArgsConstructor
 public class Result<T> implements Serializable {
@@ -13,7 +15,6 @@ public class Result<T> implements Serializable {
     private String status;
     private String msg;
     private T data;
-    
 
     /**
      * @param errorType

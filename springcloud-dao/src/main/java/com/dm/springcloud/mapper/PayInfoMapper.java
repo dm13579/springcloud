@@ -3,9 +3,15 @@ package com.dm.springcloud.mapper;
 import com.dm.springcloud.entity.PayInfo;
 
 /**
- * Created by smlz on 2019/11/20.
+ * 支付Mapper
  */
 public interface PayInfoMapper {
 
+    /**
+     * 商品编号查询支付信息
+     *
+     * @param orderNo
+     * @return
+     */
     PayInfo selectPayInfoByOrderNo(String orderNo);
 }

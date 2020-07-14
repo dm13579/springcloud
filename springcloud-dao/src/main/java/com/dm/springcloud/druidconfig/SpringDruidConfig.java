@@ -19,7 +19,6 @@ import java.sql.SQLException;
 
 /**
  * 德鲁伊数据源配置
- * Created by smlz on 2019/11/17.
  */
 @EnableConfigurationProperties(value = DruidDataSourceProperties.class)
 @Configuration

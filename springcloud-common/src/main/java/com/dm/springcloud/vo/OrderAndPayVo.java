@@ -2,13 +2,16 @@ package com.dm.springcloud.vo;
 
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
- * Created by smlz on 2019/11/20.
+ * 订单支付视图层
  */
 @Data
-public class OrderAndPayVo {
+public class OrderAndPayVo implements Serializable {
+
+    private static final long serialVersionUID = 7497657665778290329L;
 
     private String orderNo;
 

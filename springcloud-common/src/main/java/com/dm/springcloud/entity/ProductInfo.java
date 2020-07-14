@@ -2,11 +2,15 @@ package com.dm.springcloud.entity;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
- * Created by smlz on 2019/11/17.
+ * 商品信息实例
  */
 @Data
-public class ProductInfo {
+public class ProductInfo implements Serializable {
+
+    private static final long serialVersionUID = 3277485923804936671L;
 
     private String productNo;
 
