@@ -65,11 +65,6 @@ public class TheSameClusterPriorityWithVersionRule extends AbstractLoadBalancerR
 
     /**
      * 方法实现说明:获取相同集群下,相同版本的 所有实例
-     * @author:smlz
-     * @param discoveryProperties nacos的配置
-     * @return: List<Instance>
-     * @exception: NacosException
-     * @date:2019/11/21 16:41
      */
     private List<Instance> getTheSameClusterAndTheSameVersionInstances(NacosDiscoveryProperties discoveryProperties) throws NacosException {
 
@@ -97,11 +92,6 @@ public class TheSameClusterPriorityWithVersionRule extends AbstractLoadBalancerR
 
     /**
      * 方法实现说明:获取被调用服务的所有实例
-     * @author:smlz
-     * @param discoveryProperties nacos的配置
-     * @return: List<Instance>
-     * @exception: NacosException
-     * @date:2019/11/21 16:42
      */
     private List<Instance> getAllInstances(NacosDiscoveryProperties discoveryProperties) throws NacosException {
 
@@ -122,11 +112,6 @@ public class TheSameClusterPriorityWithVersionRule extends AbstractLoadBalancerR
 
     /**
      * 方法实现说明:跨集群环境下 相同版本的
-     * @author:smlz
-     * @param discoveryProperties
-     * @return: List<Instance>
-     * @exception: NacosException
-     * @date:2019/11/21 17:11
      */
     private List<Instance> getCrossClusterAndTheSameVersionInstList(NacosDiscoveryProperties discoveryProperties) throws NacosException {
 
