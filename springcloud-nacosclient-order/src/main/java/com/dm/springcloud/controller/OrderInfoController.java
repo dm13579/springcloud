@@ -16,22 +16,8 @@ import org.springframework.web.client.RestTemplate;
 import java.util.List;
 
 /**
-  *                  ,;,,;
-  *                ,;;'(    
-  *      __      ,;;' ' \   
-  *   /'  '\'~~'~' \ /'\.)  
-  * ,;(      )    /  |.     
-  *,;' \    /-.,,(   ) \    
-  *     ) /       ) / )|    
-  *     ||        ||  \)     
-  *    (_\       (_\
-  *@ClassName OrderInfoController
-  *@Description TODO
-  *@Author dm
-  *@Date 2020/3/4 21:11
-  *@slogan: 我自横刀向天笑，笑完我就去睡觉
-  *@Version 1.0
-  **/
+ * 订单控制层
+ */
 @RestController
 public class OrderInfoController {
 
@@ -76,8 +62,7 @@ public class OrderInfoController {
 
     @GetMapping("getServiceList")
     public List<ServiceInstance> getServiceList(){
-        List<ServiceInstance> serviceInstanceList = discoveryClient.getInstances("order-center");
-        return serviceInstanceList;
+        return discoveryClient.getInstances("order-center");
     }
 
 }

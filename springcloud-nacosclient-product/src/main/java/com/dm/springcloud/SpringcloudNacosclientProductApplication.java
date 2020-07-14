@@ -3,11 +3,14 @@ package com.dm.springcloud;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * 启动类
+ */
 @SpringBootApplication
-public class SpringcloudApplication {
+public class SpringcloudNacosclientProductApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringcloudApplication.class, args);
+		SpringApplication.run(SpringcloudNacosclientProductApplication.class, args);
 	}
 
 }
