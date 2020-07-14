@@ -12,24 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
-  *                  ,;,,;
-  *                ,;;'(    
-  *      __      ,;;' ' \   
-  *   /'  '\'~~'~' \ /'\.)  
-  * ,;(      )    /  |.     
-  *,;' \    /-.,,(   ) \    
-  *     ) /       ) / )|    
-  *     ||        ||  \)     
-  *    (_\       (_\
-  *@ClassName OrderInfoController
-  *@Description TODO
-  *@Author dm
-  *@Date 2020/3/8 19:18
-  *@slogan: 我自横刀向天笑，笑完我就去睡觉
-  *@Version 1.0
-  **/
+ * 订单Controller
+ */
 @RestController
-//@Slf4j
+@Slf4j
 public class OrderInfoController {
 
     @Autowired

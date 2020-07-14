@@ -6,6 +6,9 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/**
+ * 商品Feign调用
+ */
 @FeignClient(name = "product-center", configuration = ProductCenterFeignConfig.class)
 public interface ProductCenterFeignApi {
 

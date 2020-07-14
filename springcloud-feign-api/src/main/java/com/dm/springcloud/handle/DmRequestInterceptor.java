@@ -7,7 +7,8 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * Created by smlz on 2019/11/22.
+ * Request拦截器
+ * 让通过feign调用将token往后续的微服务传
  */
 public class DmRequestInterceptor implements feign.RequestInterceptor {
     @Override

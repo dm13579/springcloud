@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * Created by smlz on 2020/2/8.
+ * Ribbon负载均衡规则
  */
 @Configuration
 public class IRuleConfig {
