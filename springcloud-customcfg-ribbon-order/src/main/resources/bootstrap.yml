@@ -1,0 +1,28 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 122.51.157.42:8848
+        file-extension: yml
+        shared-dataids: common.yml,common2.yml
+        refreshable-dataids: common.yml,common2.yml
+  application:
+    name: order-center
+  profiles:
+    active: dev
+
+#自定义Ribbon的细粒度配置
+product-center:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule;
+pay-center:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
+#开启ribbon饥饿加载,解决微服务调用第一次很慢的情况下
+ribbon:
+  eager-load:
+    clients: product-center,pay-center
+    enabled: true
+server:
+  port: 8080
+
