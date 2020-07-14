@@ -10,5 +10,12 @@ spring:
     name: order-center
   profiles:
     active: dev
+
+#开启ribbon饥饿加载,解决微服务调用第一次很慢的情况下
+ribbon:
+  eager-load:
+    clients: product-center,pay-center
+    enabled: true
 server:
   port: 8080
+

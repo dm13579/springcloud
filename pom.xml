@@ -34,6 +34,9 @@
         <module>springcloud-feign-order</module>
         <module>springcloud-feign-product</module>
         <module>springcloud-feign-api</module>
+        <module>springcloud-customcfg-ribbon-order</module>
+        <module>springcloud-customlb-order</module>
+        <module>springcloud-customlb-product</module>
     </modules>
 
     <dependencies>
