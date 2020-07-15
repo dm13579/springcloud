@@ -8,8 +8,8 @@ spring:
         refreshable-dataids: common.yml,common2.yml
     sentinel:
       transport:
-        dashboard: localhost:9999
-        #namespace: bc7613d2-2e22-4292-a748-48b78170f14c  #指定namespace的id
+        dashboard: localhost:8080
+#        namespace: bc7613d2-2e22-4292-a748-48b78170f14c  #指定namespace的id
   main:
     allow-bean-definition-overriding: true
   application:
@@ -18,8 +18,6 @@ spring:
     active: dev
 #指定FeignClientApi的日志级别
 
-server:
-  port: 8080
 management:
   endpoints:
     web:
@@ -27,5 +25,5 @@ management:
         include: '*'
 
 server:
-  port: 8080
+  port: 8081
 
