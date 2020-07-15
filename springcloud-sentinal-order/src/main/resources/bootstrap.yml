@@ -8,7 +8,7 @@ spring:
         refreshable-dataids: common.yml,common2.yml
     sentinel:
       transport:
-        dashboard: localhost:8080
+        dashboard: 122.51.157.42:8085
 #        namespace: bc7613d2-2e22-4292-a748-48b78170f14c  #指定namespace的id
   main:
     allow-bean-definition-overriding: true
