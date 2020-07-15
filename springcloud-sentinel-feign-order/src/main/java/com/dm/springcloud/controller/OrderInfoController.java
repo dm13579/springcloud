@@ -2,24 +2,19 @@ package com.dm.springcloud.controller;
 
 import com.dm.springcloud.entity.OrderInfo;
 import com.dm.springcloud.entity.ProductInfo;
-import com.dm.springcloud.feignapi.productcenter.ProductCenterFeignApi;
+import com.dm.springcloud.feignapi.sentinel.ProductCenterFeignApiWithSentinel;
 import com.dm.springcloud.mapper.OrderInfoMapper;
 import com.dm.springcloud.vo.OrderVo;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * 订单Controller
- */
 @RestController
-@Slf4j
 public class OrderInfoController {
 
     @Autowired
-    private ProductCenterFeignApi productCenterFeignApi;
+    private ProductCenterFeignApiWithSentinel productCenterFeignApiWithSentinel;
 
     @Autowired
     private OrderInfoMapper orderInfoMapper;
@@ -32,7 +27,7 @@ public class OrderInfoController {
             return "根据orderNo:"+orderNo+"查询没有该订单";
         }
 
-        ProductInfo productInfo = productCenterFeignApi.selectProductInfoById(orderNo);
+        ProductInfo productInfo = productCenterFeignApiWithSentinel.selectProductInfoById(orderNo);
 
         if(productInfo == null) {
             return "没有对应的商品";
@@ -44,7 +39,8 @@ public class OrderInfoController {
         orderVo.setProductName(productInfo.getProductName());
         orderVo.setProductNum(orderInfo.getProductCount());
 
-
         return orderVo;
     }
+
+
 }

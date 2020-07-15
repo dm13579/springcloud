@@ -1,0 +1,28 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 122.51.157.42:8848
+        file-extension: yml
+        shared-dataids: common.yml,common2.yml
+        refreshable-dataids: common.yml,common2.yml
+    sentinel:
+          transport:
+            dashboard: localhost:9999
+                #namespace: 20989a73-cdb3-41b8-85c0-e9a3530e28a6
+  application:
+    name: product-center
+  profiles:
+    active: dev
+logging:
+  level:
+    com:
+      tuling:
+        mapper: debug
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+server:
+  port: 8082
