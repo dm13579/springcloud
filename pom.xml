@@ -37,6 +37,15 @@
         <module>springcloud-customcfg-ribbon-order</module>
         <module>springcloud-customlb-order</module>
         <module>springcloud-customlb-product</module>
+        <module>springcloud-sentinal-order</module>
+        <module>springcloud-sentinal-product</module>
+        <module>springcloud-sentinal-timeout-order</module>
+        <module>springcloud-sentinal-timeout-product</module>
+        <module>springcloud-sentinel-feign-order</module>
+        <module>springcloud-sentinel-feign-product</module>
+        <module>springcloud-sentinel-ribbon-order</module>
+        <module>springcloud-sentinel-ribbon-product</module>
+        <module>springcloud-sentinel-extension-order</module>
     </modules>
 
     <dependencies>
@@ -49,7 +58,6 @@
 
     <dependencyManagement>
         <dependencies>
-
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -68,6 +76,7 @@
         </dependencies>
 
     </dependencyManagement>
+
     <repositories>
         <repository>
             <id>spring</id>
