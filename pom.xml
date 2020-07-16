@@ -39,8 +39,8 @@
         <module>springcloud-customlb-product</module>
         <module>springcloud-sentinal-order</module>
         <module>springcloud-sentinal-product</module>
-        <module>springcloud-sentinal-timeout-order</module>
-        <module>springcloud-sentinal-timeout-product</module>
+        <module>springcloud-timeout-order</module>
+        <module>springcloud-timeout-product</module>
         <module>springcloud-sentinel-feign-order</module>
         <module>springcloud-sentinel-feign-product</module>
         <module>springcloud-sentinel-ribbon-order</module>

@@ -18,6 +18,7 @@ public class ProductInfoController implements ProductCenterFeignApiWithSentinel 
     @Autowired
     private ProductInfoMapper productInfoMapper;
 
+    @Override
     @RequestMapping("/selectProductInfoById/{productNo}")
     public ProductInfo selectProductInfoById(@PathVariable("productNo") String productNo)  {
 

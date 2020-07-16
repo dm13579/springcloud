@@ -8,22 +8,22 @@ spring:
         refreshable-dataids: common.yml,common2.yml
     sentinel:
       transport:
-        dashboard: 122.51.157.42:8085
-#        namespace: bc7613d2-2e22-4292-a748-48b78170f14c  #指定namespace的id
+        dashboard: localhost:9999
   main:
     allow-bean-definition-overriding: true
   application:
     name: order-center
   profiles:
     active: dev
-#指定FeignClientApi的日志级别
-
 management:
   endpoints:
     web:
       exposure:
         include: '*'
-
+#是否开启@SentinelRestTemplate注解
+resttemplate:
+  sentinel:
+    enabled: true
 server:
   port: 8081
 
