@@ -48,6 +48,7 @@
         <module>springcloud-sentinel-extension-order</module>
         <module>springcloud-sentinel-ahas-order</module>
         <module>springcloud-sentinel-rulepersistence-pull-order</module>
+        <module>springcloud-sentinel-rulepersistence-push-order</module>
     </modules>
 
     <dependencies>
