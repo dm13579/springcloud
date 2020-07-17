@@ -5,6 +5,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 
+/**
+ * restTemplate配置连接超时，超时1秒掐死线程
+ */
 @Configuration
 public class WebConfig {
 

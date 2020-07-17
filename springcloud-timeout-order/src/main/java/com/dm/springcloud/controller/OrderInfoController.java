@@ -34,6 +34,7 @@ public class OrderInfoController {
         try{
             ResponseEntity<ProductInfo> responseEntity= restTemplate.getForEntity(uri+orderInfo.getProductNo(), ProductInfo.class);
             productInfo = responseEntity.getBody();
+            int i = 1/0;
         }catch (Exception e) {
             throw new RuntimeException("调用超时");
         }

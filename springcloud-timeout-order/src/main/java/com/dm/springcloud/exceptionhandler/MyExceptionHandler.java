@@ -5,6 +5,9 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+/**
+ * 设值全局异常
+ */
 @ControllerAdvice
 public class MyExceptionHandler {
 
