@@ -8,6 +8,10 @@ import feign.hystrix.FallbackFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
+/**
+ * 异常处理类
+ * 可根据异常去配不同的返回信息
+ */
 @Component
 @Slf4j
 public class ProductCenterFeignApiWithSentielFallbackFactory implements FallbackFactory<ProductCenterFeignApiWithSentinel> {
@@ -17,12 +21,14 @@ public class ProductCenterFeignApiWithSentielFallbackFactory implements Fallback
 
             @Override
             public ProductInfo selectProductInfoById(String productNo) {
-                log.error("原因:{}",throwable);
+
                 ProductInfo productInfo = new ProductInfo();
                 if(throwable instanceof FlowException){
+                    log.error("原因:{流控}",throwable);
                     productInfo.setProductName("我是被流控的默认商品");
                 }
                 if(throwable instanceof DegradeException){
+                    log.error("原因:{熔断降级}",throwable);
                     productInfo.setProductName("我是被降级的默认商品");
                 }
                 return productInfo;

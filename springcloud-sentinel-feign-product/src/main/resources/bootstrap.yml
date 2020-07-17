@@ -9,6 +9,7 @@ spring:
     sentinel:
       transport:
         dashboard: localhost:9999
+# 配置覆盖
   main:
     allow-bean-definition-overriding: true
   application:

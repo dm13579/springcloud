@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * 商品Controller
+ */
 @RestController
 @Slf4j
 public class ProductInfoController implements ProductCenterFeignApiWithSentinel {

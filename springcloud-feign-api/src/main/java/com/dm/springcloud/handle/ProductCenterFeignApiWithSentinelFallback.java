@@ -4,6 +4,10 @@ import com.dm.springcloud.entity.ProductInfo;
 import com.dm.springcloud.feignapi.sentinel.ProductCenterFeignApiWithSentinel;
 import org.springframework.stereotype.Component;
 
+/**
+ * 异常处理类
+ * 只能单一因为不知道是什么异常
+ */
 @Component
 public class ProductCenterFeignApiWithSentinelFallback implements ProductCenterFeignApiWithSentinel {
     @Override

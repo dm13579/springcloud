@@ -2,14 +2,12 @@ package com.dm.springcloud.feignapi.sentinel;
 
 import com.dm.springcloud.entity.ProductInfo;
 import com.dm.springcloud.handle.ProductCenterFeignApiWithSentielFallbackFactory;
-import com.dm.springcloud.handle.ProductCenterFeignApiWithSentinelFallback;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-
 /**
- * 商品sentinal Feign调用
+ * sentinel 商品Feign调用
  */
 //@FeignClient(name = "product-center",fallback = ProductCenterFeignApiWithSentinelFallback.class)
 @FeignClient(name = "product-center",fallbackFactory = ProductCenterFeignApiWithSentielFallbackFactory.class)
