@@ -1,0 +1,29 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 122.51.157.42:8848
+        file-extension: yml
+        shared-dataids: common.yml,common2.yml
+        refreshable-dataids: common.yml,common2.yml
+    sentinel:
+      transport:
+        dashboard: localhost:9999
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: order-center
+  profiles:
+    active: dev
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+#是否开启@SentinelRestTemplate注解
+resttemplate:
+  sentinel:
+    enabled: true
+server:
+  port: 8080
+
