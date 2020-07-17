@@ -13,10 +13,11 @@ spring:
     name: product-center
   profiles:
     active: dev
+
 #是否开启@SentinelRestTemplate注解
-resttemplate:
-  sentinel:
-    enabled: true
+#resttemplate:
+#  sentinel:
+#    enabled: true
 server:
   port: 8081
 

@@ -9,6 +9,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpRequest;
 import org.springframework.http.client.ClientHttpRequestExecution;
 
+/**
+ * 全局异常处理类
+ */
 @Slf4j
 public class GlobalExceptionHandler {
 
@@ -22,7 +25,6 @@ public class GlobalExceptionHandler {
      */
     public static SentinelClientHttpResponse handleException(HttpRequest request,
                                                              byte[] body, ClientHttpRequestExecution execution, BlockException ex)  {
-
         ProductInfo productInfo = new ProductInfo();
         productInfo.setProductName("被限制流量拉");
         productInfo.setProductNo("-1");

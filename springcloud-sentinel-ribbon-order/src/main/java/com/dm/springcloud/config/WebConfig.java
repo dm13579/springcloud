@@ -8,7 +8,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * Created by smlz on 2019/11/18.
+ * restTemplate配置
+ * 开启ribbon负载均衡--加入LoadBalanced
+ * 开启sentinel限流流控--加入SentinelRestTemplate
+ * --blockHandler处理BlockException 限流了
+ * --fallback 熔断降级了
  */
 @Configuration
 public class WebConfig {
@@ -18,7 +22,6 @@ public class WebConfig {
     @SentinelRestTemplate(
             blockHandler = "handleException",blockHandlerClass = GlobalExceptionHandler.class,
             fallback = "fallback",fallbackClass = GlobalExceptionHandler.class
-
     )
     public RestTemplate restTemplate() {
         return new RestTemplate();
