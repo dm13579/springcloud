@@ -1,0 +1,55 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 122.51.157.42:8848
+        file-extension: yml
+        shared-dataids: common.yml,common2.yml
+        refreshable-dataids: common.yml,common2.yml
+    sentinel:
+      transport:
+        dashboard: localhost:9999
+#      datasource:
+#        # 名称随意
+#        flow:
+#          nacos:
+#            server-addr: 122.51.157.42:8848
+#            dataId: ${spring.application.name}-flow-rules
+#            groupId: SENTINEL_GROUP
+#            rule-type: flow
+#        degrade:
+#          nacos:
+#            server-addr: 122.51.157.42:8848
+#            dataId: ${spring.application.name}-degrade-rules
+#            groupId: SENTINEL_GROUP
+#            rule-type: degrade
+#        system:
+#          nacos:
+#            server-addr: 122.51.157.42:8848
+#            dataId: ${spring.application.name}-system-rules
+#            groupId: SENTINEL_GROUP
+#            rule-type: system
+#        authority:
+#          nacos:
+#            server-addr: 122.51.157.42:8848
+#            dataId: ${spring.application.name}-authority-rules
+#            groupId: SENTINEL_GROUP
+#            rule-type: authority
+#        param-flow:
+#          nacos:
+#            server-addr: 122.51.157.42:8848
+#            dataId: ${spring.application.name}-param-flow-rules
+#            groupId: SENTINEL_GROUP
+#            rule-type: param-flow
+  application:
+    name: order-center
+  profiles:
+    active: dev
+
+#是否开启@SentinelRestTemplate注解
+resttemplate:
+  sentinel:
+    enabled: true
+server:
+  port: 8080
+
