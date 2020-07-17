@@ -46,6 +46,8 @@
         <module>springcloud-sentinel-ribbon-order</module>
         <module>springcloud-sentinel-ribbon-product</module>
         <module>springcloud-sentinel-extension-order</module>
+        <module>springcloud-sentinel-ahas-order</module>
+        <module>springcloud-sentinel-rulepersistence-pull-order</module>
     </modules>
 
     <dependencies>

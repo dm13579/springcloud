@@ -92,3 +92,10 @@ springcloud-timeout-product/target/classes/bootstrap.yml
 springcloud-timeout-product/target/generated-sources/
 springcloud-sentinel-extension-order/target/classes/bootstrap.yml
 springcloud-sentinel-extension-order/target/generated-sources/
+springcloud-sentinel-ahas-order/springcloud-sentinel-ahas-order.iml
+springcloud-sentinel-ahas-order/target/classes/bootstrap.yml
+springcloud-sentinel-ahas-order/target/generated-sources/
+springcloud-sentinel-rulepersistence-pull-order/springcloud-sentinel-rulepersistence-pull-order.iml
+springcloud-sentinel-rulepersistence-pull-order/target/classes/META-INF/
+springcloud-sentinel-rulepersistence-pull-order/target/classes/bootstrap.yml
+springcloud-sentinel-rulepersistence-pull-order/target/generated-sources/
