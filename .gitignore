@@ -90,3 +90,5 @@ springcloud-timeout-order/target/generated-sources/
 springcloud-timeout-product/springcloud-timeout-product.iml
 springcloud-timeout-product/target/classes/bootstrap.yml
 springcloud-timeout-product/target/generated-sources/
+springcloud-sentinel-extension-order/target/classes/bootstrap.yml
+springcloud-sentinel-extension-order/target/generated-sources/
