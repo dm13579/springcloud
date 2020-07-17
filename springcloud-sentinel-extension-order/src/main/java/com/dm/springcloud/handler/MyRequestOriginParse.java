@@ -8,7 +8,7 @@ import org.springframework.util.StringUtils;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * 类的描述:区分来源接口
+ * 区分来源接口
  */
 @Component
 @Slf4j

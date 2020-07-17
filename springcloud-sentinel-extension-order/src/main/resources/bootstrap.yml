@@ -6,35 +6,18 @@ spring:
         file-extension: yml
         shared-dataids: common.yml,common2.yml
         refreshable-dataids: common.yml,common2.yml
-      sentinel:
-        transport:
-          dashboard: localhost:9999
-                #namespace: bc7613d2-2e22-4292-a748-48b78170f14c  #指定namespace的id
-          main:
-            allow-bean-definition-overriding: true
+    sentinel:
+      transport:
+        dashboard: localhost:9999
   application:
     name: order-center
   profiles:
     active: dev
-#指定FeignClientApi的日志级别
 
-logging:
-  level:
-    com:
-      tuling:
-        feignapi: debug
-feign:
-  client:
-    config:
-      product-center:
-        loggerLevel: full
-  httpclient:
-    enabled: true
-    max-connections: 200
-    max-connections-per-route: 50
+#是否开启@SentinelRestTemplate注解
+resttemplate:
   sentinel:
     enabled: true
-
 server:
   port: 8080
 

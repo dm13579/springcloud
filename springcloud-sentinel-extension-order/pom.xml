@@ -10,8 +10,8 @@
     </parent>
     <artifactId>springcloud-sentinel-extension-order</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springcloud-sentinel-feign-order</name>
-    <description>基于feignwithsentinel负载均衡</description>
+    <name>springcloud-sentinel-extension-order</name>
+    <description>sentinel扩展</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -23,14 +23,9 @@
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
-        <!--加入nocas-client-->
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-alibaba-nacos-discovery</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-alibaba-nacos-config</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <dependency>
@@ -39,21 +34,23 @@
             <version>21.0</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
+        <!--数据层-->
         <dependency>
             <groupId>com.dm</groupId>
             <artifactId>springcloud-dao</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
+        <!--加入nocas-client-->
         <dependency>
-            <groupId>com.dm</groupId>
-            <artifactId>springcloud-feign-api</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-alibaba-nacos-discovery</artifactId>
+        </dependency>
+
+        <!--加入配置中心-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-alibaba-nacos-config</artifactId>
         </dependency>
 
         <!--加入sentinel-->
@@ -61,7 +58,6 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
         </dependency>
-
 
         <!--加入actuator-->
         <dependency>

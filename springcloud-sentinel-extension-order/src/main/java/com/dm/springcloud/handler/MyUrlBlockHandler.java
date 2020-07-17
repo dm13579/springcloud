@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * 类的描述:处理流控,降级规则
+ * 处理流控,降级规则
  */
 @Component
 public class MyUrlBlockHandler implements UrlBlockHandler {
