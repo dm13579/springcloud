@@ -1,0 +1,23 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 122.51.157.42:8848
+        file-extension: yml
+        shared-dataids: common.yml,common2.yml
+        refreshable-dataids: common.yml,common2.yml
+  application:
+    name: order-center
+  profiles:
+    active: dev
+#是否开启@SentinelRestTemplate注解
+resttemplate:
+  sentinel:
+    enabled: true
+server:
+  port: 8080
+
+# ahas 配置
+ahas.namespace: default
+project.name: order-center
+ahas.license: eb118f06858242ea8562c013820b1b35
