@@ -22,4 +22,11 @@ public class OrderInfo implements Serializable {
     private String productNo;
 
     private Integer productCount;
+
+    private Integer userId;
+
+    /**
+     * 状态 0下单 1完成
+     */
+    private Integer status;
 }

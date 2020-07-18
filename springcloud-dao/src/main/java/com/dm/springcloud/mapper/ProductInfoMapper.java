@@ -1,6 +1,7 @@
 package com.dm.springcloud.mapper;
 
 import com.dm.springcloud.entity.ProductInfo;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * 商品Mapper
@@ -14,4 +15,9 @@ public interface ProductInfoMapper {
      * @return
      */
     ProductInfo selectProductInfoById(String productNo);
+
+    Integer reduceCount(@Param("productNo") String productNo, @Param("amount") Integer amount);
+
+    Integer selectCountById(@Param("productNo") String productNo);
+
 }

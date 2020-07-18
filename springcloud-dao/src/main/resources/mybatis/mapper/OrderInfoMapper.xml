@@ -5,4 +5,13 @@
     <select id="selectOrderInfoById" resultType="com.dm.springcloud.entity.OrderInfo" parameterType="string">
       select * from order_info where order_no=#{orderNo}
     </select>
+
+    <insert id="saveOrder" parameterType="com.dm.springcloud.entity.OrderInfo" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO `order_info` (userId,userName,productNo,status,`productCount`)
+        VALUES (#{userId},#{userName},#{productNo},#{status},#{productCount})
+    </insert>
+
+    <update id="updateOrderStatusById" parameterType="map">
+        update `order_info` set status=#{status} where order_no=#{orderNo}
+    </update>
 </mapper>

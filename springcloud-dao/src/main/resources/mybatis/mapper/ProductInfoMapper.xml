@@ -5,4 +5,10 @@
     <select id="selectProductInfoById" resultType="com.dm.springcloud.entity.ProductInfo" parameterType="string">
       select * from product_info where product_no=#{productNo}
     </select>
+    <update id="reduceCount" parameterType="map">
+        UPDATE product_info SET product_store = product_store - #{amount} WHERE product_no=#{productNo}
+    </update>
+    <select id="selectCountById" parameterType="String" resultType="int">
+        select `product_store` from product_info where product_no=#{productNo}
+    </select>
 </mapper>

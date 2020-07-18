@@ -49,6 +49,9 @@
         <module>springcloud-sentinel-ahas-order</module>
         <module>springcloud-sentinel-rulepersistence-pull-order</module>
         <module>springcloud-sentinel-rulepersistence-push-order</module>
+        <module>springcloud-seata-order</module>
+        <module>springcloud-seata-account</module>
+        <module>springcloud-seata-product</module>
     </modules>
 
     <dependencies>

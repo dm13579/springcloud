@@ -14,4 +14,5 @@ public interface PayInfoMapper {
      * @return
      */
     PayInfo selectPayInfoByOrderNo(String orderNo);
+
 }

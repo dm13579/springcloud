@@ -1,0 +1,36 @@
+spring:
+  datasource:
+      druid:
+        username: root
+        password: 7028858@dm
+        jdbcUrl: jdbc:mysql://122.51.157.42:3306/seata-account?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+        driverClassName: com.mysql.jdbc.Driver
+        initialSize: 5
+        minIdle: 5
+        maxActive: 20
+        maxWait: 60000
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: SELECT 1 FROM DUAL
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        filters: stat,wall
+        maxPoolPreparedStatementPerConnectionSize: 20
+        useGlobalDataSourceStat: true
+        connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: account-center
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 122.51.157.42:8848
+    alibaba:
+      seata:
+        tx-service-group: prex_tx_group
+
+server:
+  port: 8081
