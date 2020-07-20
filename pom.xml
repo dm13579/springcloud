@@ -15,8 +15,6 @@
     <packaging>pom</packaging>
     <name>springcloud</name>
     <description>微服务alibaba</description>
-
-
     <properties>
         <java.version>1.8</java.version>
         <lomback.version>1.8.4</lomback.version>
@@ -52,6 +50,8 @@
         <module>springcloud-seata-order</module>
         <module>springcloud-seata-account</module>
         <module>springcloud-seata-product</module>
+        <module>springcloud-gateway</module>
+        <module>springcloud-gateway-sentinel</module>
     </modules>
 
     <dependencies>
